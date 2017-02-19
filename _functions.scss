@@ -1,0 +1,4 @@
+// Functions can be created to do various tasks
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}

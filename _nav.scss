@@ -1,0 +1,30 @@
+
+@mixin link($link, $hover){
+  a {
+      color: $link;
+      &:hover {
+        color: $hover;
+      }
+  }
+}
+
+
+.nav-bar {
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: $main-color-dark;
+  }
+  li {
+      float: left;
+      @include link($background-color, #d3d3d3);
+      a {
+          display: block;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+      }
+  }
+}

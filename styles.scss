@@ -1,3 +1,60 @@
-body {
-  background-color: grey;
+
+// Import partial files that can be used to organize your code
+@import '_colors';
+@import '_nav';
+@import '_functions';
+
+// Set values that will be used more than once to variables
+$radius: 5px;
+$element-spacing: 5px;
+
+// Use mixins to write complicated attribute sets that will be used more than once
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+html, body {
+  background-color: $main-color;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  @include border-radius($radius);
+  margin: 10px;
+  background-color: $background-color;
+  padding: $element-spacing;
+  color: $text-color;
+  // Elements can be nested inside their parent
+  h2 {
+    color: tint($text-color, 60);
+    margin: $element-spacing / 2;
+  }
+}
+
+.list {
+  ul {
+    list-style-type: square;
+  }
+}
+
+.todo-list {
+  // Extend elements with a base element for less rewriting
+  @extend .list;
+  @extend .content;
+}
+
+.grocery-list {
+  @extend .list;
+  @extend .content;
+}
+
+.article {
+  @extend .content;
+  p {
+    margin: $element-spacing;
+  }
 }

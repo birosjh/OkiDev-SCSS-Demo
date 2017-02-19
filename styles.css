@@ -1,4 +1,43 @@
-body {
-  background-color: grey; }
+.nav-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black; }
+.nav-bar li {
+  float: left; }
+  .nav-bar li a {
+    color: white; }
+    .nav-bar li a:hover {
+      color: #d3d3d3; }
+  .nav-bar li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none; }
+
+html, body {
+  background-color: grey;
+  margin: 0;
+  padding: 0; }
+
+.content, .todo-list, .grocery-list, .article {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  margin: 10px;
+  background-color: white;
+  padding: 5px;
+  color: blue; }
+  .content h2, .todo-list h2, .grocery-list h2, .article h2 {
+    color: #9999ff;
+    margin: 2.5px; }
+
+.list ul, .todo-list ul, .grocery-list ul {
+  list-style-type: square; }
+
+.article p {
+  margin: 5px; }
 
 /*# sourceMappingURL=styles.css.map */
